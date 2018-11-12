@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="temporal2"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2018-10-17 09:54:39 a. m."/>
+        <attribute name="created" value="dGVtcG9yYWwyO0xBQkExMzIwNDU7MjAxOC0xMC0xNzswOTozODoyNCBhLiBtLjsyOTU2"/>
+        <attribute name="edited" value="dGVtcG9yYWwyO0xBQkExMzIwNDU7MjAxOC0xMC0xNzswOTo1NDozOSBhLiBtLjsxOzMwNjg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="IAnnio" type="Integer" array="False" size=""/>
+            <assign variable="iAnnio" expression="1996"/>
+            <declare name="iResi4" type="Integer" array="False" size=""/>
+            <assign variable="iResi4" expression="iAnnio % 4"/>
+            <declare name="iResi100" type="Integer" array="False" size=""/>
+            <assign variable="iResi100" expression="iAnnio % 100"/>
+            <declare name="iResi400" type="Integer" array="False" size=""/>
+            <assign variable="iResi400" expression="iAnnio % 400"/>
+            <if expression="(iResi4 == 0) &amp;&amp; (!(iResi100 == 0) &amp;&amp; (iResi400 == 0))">
+                <then>
+                    <output expression="&quot;A&#241;o bisiesto&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;A&#241;o no bisiesto&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
